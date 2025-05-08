@@ -1,0 +1,24 @@
+spring:
+  config:
+    activate:
+      on-profile: default
+  sql:
+    init:
+      platform: h2
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    sap:
+      connectivity:
+        destinations:
+          Northwind:
+            name: Northwind
+            url: https://services.odata.org/V2/Northwind/Northwind.svc/
+
+cds:
+  data-source:
+    auto-config:
+      enabled: false
+
+server:
+  port: 8081

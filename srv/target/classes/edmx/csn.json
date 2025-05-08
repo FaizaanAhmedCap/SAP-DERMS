@@ -1,0 +1,46 @@
+{
+  "definitions": {
+    "NorthwindService": {
+      "@source": "NorthwindService.cds",
+      "kind": "service"
+    },
+    "NorthwindService.Products": {
+      "kind": "entity",
+      "elements": {
+        "ProductID": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "ProductName": {
+          "type": "cds.String"
+        },
+        "CategoryID": {
+          "type": "cds.Integer"
+        },
+        "QuantityPerUnit": {
+          "type": "cds.String"
+        },
+        "UnitPrice": {
+          "type": "cds.Decimal"
+        },
+        "UnitsInStock": {
+          "type": "cds.Integer"
+        },
+        "UnitsOnOrder": {
+          "type": "cds.Integer"
+        },
+        "ReorderLevel": {
+          "type": "cds.Integer"
+        },
+        "Discontinued": {
+          "type": "cds.Boolean"
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v5.9.2",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}

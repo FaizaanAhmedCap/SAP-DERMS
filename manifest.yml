@@ -1,0 +1,31 @@
+applications:
+  - name: external-service
+    path: srv/target/external-service.jar
+    memory: 1500M
+    timeout: 300
+    random-route: true
+    buildpacks:
+      - sap_java_buildpack_jakarta
+
+env:
+  TARGET_RUNTIME: tomee
+
+_schema-version: "3.1"
+ID: cap-java-northwind
+version: 0.0.1
+
+modules:
+  - name: srv
+    type: java
+    path: srv
+    parameters:
+      memory: 512M
+    requires:
+      - name: northwind-destination
+
+resources:
+  - name: northwind-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
