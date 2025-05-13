@@ -1,3 +1,4 @@
+
 spring:
   config:
     activate:
@@ -14,6 +15,44 @@ spring:
           Northwind:
             name: Northwind
             url: https://services.odata.org/V2/Northwind/Northwind.svc/
+
+cds:
+  data-source:
+    auto-config:
+      enabled: false
+
+server:
+  port: 8081
+---
+management:
+  endpoint:
+    health:
+      show-components: always
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  health:
+    defaults:
+      enabled: false
+    ping:
+      enabled: true
+    db:
+      enabled: true
+---
+spring:
+  config:
+    activate:
+      on-profile: cloud
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://699dad4ftrial.authentication.us10.hana.ondemand.com/oauth/token
+  main:
+    allow-bean-definition-overriding: true
 
 cds:
   data-source:

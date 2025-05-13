@@ -1,9 +1,3 @@
-cds/gen/northwindservice/NorthwindService$Remote.class
-cds/gen/northwindservice/NorthwindService.class
-cds/gen/northwindservice/Products_.class
-customer/external_service/Application.class
-cds/gen/northwindservice/Products.class
 customer/external_service/NorthwindService.class
-cds/gen/northwindservice/NorthwindService_.class
+customer/external_service/Application.class
 customer/external_service/NorthwindController.class
-cds/gen/northwindservice/NorthwindService$Application.class

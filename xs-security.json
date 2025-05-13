@@ -1,0 +1,20 @@
+{
+    "xsappname": "external-service-xsapp",
+    "tenant-mode": "dedicated",
+    "scopes": [
+      {
+        "name": "$XSAPPNAME.User",
+        "description": "User scope"
+      }
+    ],
+    "role-templates": [
+      {
+        "name": "User",
+        "description": "Default user role",
+        "scope-references": [
+          "$XSAPPNAME.User"
+        ]
+      }
+    ]
+  }
+  
